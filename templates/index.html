@@ -112,6 +112,47 @@
             flex-shrink: 0;
         }
 
+        .bots-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .bot-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .bot-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .bot-region {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .bot-handle {
+            font-size: 11px;
+            color: #888;
+        }
+
+        @media (max-width: 420px) {
+            .bots-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         footer {
             text-align: center;
             margin-top: 48px;
@@ -172,6 +213,66 @@
                     <div class="app-desc">News article links from RSS feeds</div>
                 </div>
                 <div class="app-arrow">&#8250;</div>
+            </a>
+        </div>
+
+        <div class="section-label" style="margin-top: 32px;">Regional Weather Bots</div>
+        <div class="bots-grid">
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_dc">
+                <div class="bot-region">Washington, D.C.</div>
+                <div class="bot-handle">@weather_dc</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_northeast">
+                <div class="bot-region">Northeast</div>
+                <div class="bot-handle">@weather_northeast</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_midatlantic">
+                <div class="bot-region">Mid-Atlantic</div>
+                <div class="bot-handle">@weather_midatlantic</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_southeast">
+                <div class="bot-region">Southeast</div>
+                <div class="bot-handle">@weather_southeast</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_northern_plains">
+                <div class="bot-region">Northern Plains</div>
+                <div class="bot-handle">@weather_northern_plains</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_southern_plains">
+                <div class="bot-region">Southern Plains</div>
+                <div class="bot-handle">@weather_southern_plains</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_chicago">
+                <div class="bot-region">Chicago</div>
+                <div class="bot-handle">@weather_chicago</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_nyc">
+                <div class="bot-region">NYC</div>
+                <div class="bot-handle">@weather_nyc</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_la">
+                <div class="bot-region">Los Angeles</div>
+                <div class="bot-handle">@weather_la</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_northern_rockies">
+                <div class="bot-region">Northern Rockies</div>
+                <div class="bot-handle">@weather_northern_rockies</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_southern_rockies">
+                <div class="bot-region">Southern Rockies</div>
+                <div class="bot-handle">@weather_southern_rockies</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_pacific_nw">
+                <div class="bot-region">Pacific Northwest</div>
+                <div class="bot-handle">@weather_pacific_nw</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_norcal">
+                <div class="bot-region">Northern California</div>
+                <div class="bot-handle">@weather_norcal</div>
+            </a>
+            <a class="bot-card" href="https://mastodon.chrisclark.net/@weather_socal">
+                <div class="bot-region">Southern California</div>
+                <div class="bot-handle">@weather_socal</div>
             </a>
         </div>
 
