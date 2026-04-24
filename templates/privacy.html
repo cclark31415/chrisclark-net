@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4F6FA" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
+    <title>Privacy · Chris Clark</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme");
+                var dark = saved === "dark" || (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+                if (dark) document.documentElement.setAttribute("data-theme", "dark");
+            } catch (e) {}
+        })();
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            color-scheme: light dark;
+            --bg: #F4F6FA;
+            --surface: #FFFFFF;
+            --text: #0F172A;
+            --muted: #64748B;
+            --primary: #E8834F;
+            --border: rgba(15, 23, 42, 0.08);
+            --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+        }
+        :root[data-theme="dark"] {
+            --bg: #0B1220;
+            --surface: #121A2B;
+            --text: #E6ECF3;
+            --muted: #94A3B8;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 96px 20px 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .site-logo {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 100;
+            display: block;
+            width: 120px;
+            height: 64px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+        .site-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .container { max-width: 720px; width: 100%; }
+        h1 { font-size: 32px; margin-bottom: 6px; letter-spacing: -0.5px; }
+        .updated { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+        h2 { font-size: 18px; margin: 28px 0 10px; }
+        p, li { line-height: 1.6; font-size: 15px; margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        a { color: var(--primary); }
+        .back { display: inline-block; margin-top: 32px; color: var(--muted); text-decoration: none; }
+        .back:hover { color: var(--text); }
+        code { background: var(--surface); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); font-size: 13px; }
+        @media (max-width: 520px) {
+            .site-logo { width: 96px; height: 52px; }
+            body { padding-top: 80px; }
+        }
+    </style>
+</head>
+<body>
+    <a class="site-logo" href="/" aria-label="Chris Clark home">
+        <img src="/static/CC_Mountain.jpg" alt="" width="320" height="175">
+    </a>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: April 24, 2026</p>
+
+        <p>This site and the apps linked from it are a personal project. I don't run ads, sell any data, or share personal information with third parties. This page explains what's collected and how it's used across chrisclark.net and its subdomain apps.</p>
+
+        <h2>What is collected</h2>
+        <ul>
+            <li><strong>Preferences</strong> — your light/dark theme choice and cookie-consent decision are stored in your browser's local storage. They never leave your device.</li>
+            <li><strong>App-specific data</strong> — some apps store additional items locally in your browser; see each app's own privacy page for specifics.</li>
+            <li><strong>Standard server logs</strong> — the hosting platform (Microsoft Azure App Service) records basic request metadata (IP address, user agent, timestamp, URL) for up to 30 days for reliability and security. These logs are not aggregated, analyzed, or shared.</li>
+        </ul>
+
+        <h2>Cookies and local storage</h2>
+        <p>No tracking or advertising cookies are used. Typical local storage entries:</p>
+        <ul>
+            <li><code>theme</code> — your light/dark mode preference.</li>
+            <li><code>cookie_consent</code> — whether you accepted the cookie banner.</li>
+        </ul>
+
+        <h2>Third-party services</h2>
+        <p>This site currently has no third-party analytics, ad networks, or trackers. If sign-in is added to any app here, those details will appear on that app's privacy page.</p>
+
+        <h2>Your rights</h2>
+        <p>Under GDPR, CCPA, and similar regulations, you have the right to access, correct, or delete any personal data held about you. The only data stored about you right now lives on your own device — you can clear it any time in your browser's site-data controls.</p>
+        <p>For requests about server-side data (currently just the standard web logs described above), contact <a href="mailto:admin@chrisclark.net">admin@chrisclark.net</a>.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes in a material way, the updated date at the top of this page will change. Previous versions are visible in the <a href="https://github.com/cclark31415/chrisclark-net">site's git history</a>.</p>
+
+        <h2>Contact</h2>
+        <p><a href="mailto:admin@chrisclark.net">admin@chrisclark.net</a></p>
+
+        <a class="back" href="/">← Back</a>
+    </div>
+</body>
+</html>
