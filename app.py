@@ -18,6 +18,11 @@ def terms():
     return render_template('terms.html')
 
 
+@app.route('/JournalingApp')
+def journal_app():
+    return render_template('journal_app_index.html')
+
+
 @app.route('/JournalingApp/privacy')
 def journal_privacy():
     return render_template('journal_app_privacy.html')

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4F6FA" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Journal - A private, open journaling app for Android. No ads, no tracking, entries stored locally on your device.">
+    <title>Journal App · Chris Clark</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme");
+                var dark = saved === "dark" || (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+                if (dark) document.documentElement.setAttribute("data-theme", "dark");
+            } catch (e) {}
+        })();
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            color-scheme: light dark;
+            --bg: #F4F6FA;
+            --surface: #FFFFFF;
+            --text: #0F172A;
+            --muted: #64748B;
+            --primary: #E8834F;
+            --border: rgba(15, 23, 42, 0.08);
+            --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+        }
+        :root[data-theme="dark"] {
+            --bg: #0B1220;
+            --surface: #121A2B;
+            --text: #E6ECF3;
+            --muted: #94A3B8;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 160px 20px 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .site-logo {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 100;
+            display: block;
+            width: 240px;
+            height: 128px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+        .site-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .container { max-width: 720px; width: 100%; }
+        h1 { font-size: 48px; margin-bottom: 16px; letter-spacing: -1px; }
+        .tagline { font-size: 18px; color: var(--muted); margin-bottom: 32px; line-height: 1.5; }
+        h2 { font-size: 18px; margin: 32px 0 16px; }
+        p { line-height: 1.6; font-size: 15px; margin-bottom: 16px; color: var(--text); }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 8px 0; font-size: 15px; line-height: 1.6; }
+        .feature-list li:before { content: "✓ "; color: var(--primary); font-weight: 600; margin-right: 8px; }
+        .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+        .btn:hover { opacity: 0.85; }
+        .btn.secondary {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .back { display: inline-block; margin-top: 48px; color: var(--muted); text-decoration: none; font-size: 15px; }
+        .back:hover { color: var(--text); }
+        @media (max-width: 520px) {
+            .site-logo { width: 160px; height: 88px; }
+            body { padding-top: 120px; }
+            h1 { font-size: 32px; }
+            .tagline { font-size: 16px; }
+            .links { flex-direction: column; }
+            .btn { display: block; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <a class="site-logo" href="/" aria-label="Chris Clark home">
+        <img src="/static/CC_Mountain.jpg" alt="" width="320" height="175">
+    </a>
+    <div class="container">
+        <h1>Journal</h1>
+        <p class="tagline">This is the official home of the Journal mobile application — a private, open journaling app for Android.</p>
+
+        <h2>Features</h2>
+        <ul class="feature-list">
+            <li>Write and organize journal entries with titles and tags</li>
+            <li>Speak to text — dictate entries using your device's microphone</li>
+            <li>Completely private — entries stored locally on your device by default</li>
+            <li>Optional Google Drive sync — sync to your own Drive, no cloud accounts needed</li>
+            <li>No ads, no tracking, no analytics</li>
+            <li>Open source — <a href="https://github.com/cclark31415/JournalApp">view on GitHub</a></li>
+        </ul>
+
+        <h2>Download</h2>
+        <p>Available on Google Play Store (coming soon)</p>
+
+        <h2>Legal</h2>
+        <p>Read the policies that govern your use of the Journal app:</p>
+        <div class="links">
+            <a href="/JournalingApp/privacy" class="btn secondary">Privacy Policy</a>
+            <a href="/JournalingApp/terms" class="btn secondary">Terms of Service</a>
+        </div>
+
+        <h2>Questions?</h2>
+        <p>Contact: <a href="mailto:admin@chrisclark.net">admin@chrisclark.net</a></p>
+
+        <a class="back" href="/">← Back to Chris Clark</a>
+    </div>
+</body>
+</html>
