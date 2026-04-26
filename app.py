@@ -19,6 +19,7 @@ def terms():
 
 
 @app.route('/JournalingApp')
+@app.route('/JournalingApp/')
 def journal_app():
     return render_template('journal_app_index.html')
 
