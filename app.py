@@ -13,6 +13,11 @@ def privacy():
     return render_template('privacy.html')
 
 
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
+
 @app.route('/health')
 def health():
     return {'status': 'healthy'}, 200
