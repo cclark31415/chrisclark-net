@@ -18,6 +18,16 @@ def terms():
     return render_template('terms.html')
 
 
+@app.route('/JournalingApp/privacy')
+def journal_privacy():
+    return render_template('journal_app_privacy.html')
+
+
+@app.route('/JournalingApp/terms')
+def journal_terms():
+    return render_template('journal_app_terms.html')
+
+
 @app.route('/health')
 def health():
     return {'status': 'healthy'}, 200

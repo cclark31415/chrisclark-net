@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4F6FA" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
+    <title>Privacy Policy · Journal App · Chris Clark</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme");
+                var dark = saved === "dark" || (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+                if (dark) document.documentElement.setAttribute("data-theme", "dark");
+            } catch (e) {}
+        })();
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            color-scheme: light dark;
+            --bg: #F4F6FA;
+            --surface: #FFFFFF;
+            --text: #0F172A;
+            --muted: #64748B;
+            --primary: #E8834F;
+            --border: rgba(15, 23, 42, 0.08);
+            --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+        }
+        :root[data-theme="dark"] {
+            --bg: #0B1220;
+            --surface: #121A2B;
+            --text: #E6ECF3;
+            --muted: #94A3B8;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 160px 20px 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .site-logo {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 100;
+            display: block;
+            width: 240px;
+            height: 128px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+        .site-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .container { max-width: 720px; width: 100%; }
+        h1 { font-size: 32px; margin-bottom: 6px; letter-spacing: -0.5px; }
+        .updated { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+        h2 { font-size: 18px; margin: 28px 0 10px; }
+        p, li { line-height: 1.6; font-size: 15px; margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
+        th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--border); }
+        th { font-weight: 600; }
+        a { color: var(--primary); }
+        code { background: var(--surface); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); font-size: 13px; }
+        .back { display: inline-block; margin-top: 32px; color: var(--muted); text-decoration: none; }
+        .back:hover { color: var(--text); }
+        @media (max-width: 520px) {
+            .site-logo { width: 160px; height: 88px; }
+            body { padding-top: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <a class="site-logo" href="/" aria-label="Chris Clark home">
+        <img src="/static/CC_Mountain.jpg" alt="" width="320" height="175">
+    </a>
+    <div class="container">
+        <h1>Privacy Policy for Journal</h1>
+        <p class="updated">Last updated: April 26, 2026</p>
+
+        <p>This Privacy Policy explains what information the Journal app ("the App", "we", "us") handles, where it is stored, and what choices you have. We designed Journal to keep your entries under your control: there are no ads, no third-party analytics, and no advertising or tracking SDKs.</p>
+
+        <h2>1. Summary</h2>
+        <ul>
+            <li>Your journal entries are stored <strong>on your device</strong>.</li>
+            <li>If you sign in with Google, you can optionally sync entries to <strong>your own Google Drive account</strong>. We never receive a copy.</li>
+            <li>Microphone audio used for speech-to-text is processed by <strong>Android's on-device or Google speech recognition service</strong> and is not stored or transmitted by the App itself.</li>
+            <li>We do <strong>not</strong> sell, rent, or share your data, and we do <strong>not</strong> use advertising, profiling, or third-party analytics.</li>
+        </ul>
+
+        <h2>2. Information the App handles</h2>
+
+        <h3>2.1 Journal content (entries, titles, tags, attachments, timestamps)</h3>
+        <ul>
+            <li><strong>Where it is stored:</strong> locally on your device in an app-private database, and — only if you enable Google Drive sync — in your own Google Drive account.</li>
+            <li><strong>Who can read it:</strong> you. We have no servers and no access to your entries.</li>
+        </ul>
+
+        <h3>2.2 Google account information (only if you sign in)</h3>
+        <ul>
+            <li><strong>What is collected:</strong> your Google account identifier and OAuth access/refresh tokens issued by Google for the Drive scopes you grant.</li>
+            <li><strong>Where it is stored:</strong> locally on your device. Tokens are not transmitted to us.</li>
+            <li><strong>Why:</strong> to read and write your journal files in your own Google Drive.</li>
+        </ul>
+
+        <h3>2.3 Microphone audio (only if you use speech-to-text)</h3>
+        <ul>
+            <li><strong>What happens:</strong> when you tap the microphone, Android's speech recognition service captures audio and returns recognized text to the App. Depending on your device, recognition may run on-device or on Google's servers under Google's terms.</li>
+            <li><strong>What we store:</strong> only the <strong>text</strong> you choose to keep in your entry. The App does not record, save, or upload the audio itself.</li>
+        </ul>
+
+        <h3>2.4 Notifications and reminders</h3>
+        <ul>
+            <li><strong>What is stored:</strong> your reminder schedule (e.g. daily/weekly time, day of week), stored locally on your device.</li>
+            <li><strong>Where it is sent:</strong> nowhere. Reminders are scheduled and shown locally by Android.</li>
+        </ul>
+
+        <h3>2.5 Settings and preferences</h3>
+        <p>Theme, session duration, sync status timestamps, and similar preferences are stored locally on your device.</p>
+
+        <h3>2.6 Information we do <strong>not</strong> collect</h3>
+        <ul>
+            <li>We do not collect advertising identifiers, location, contacts, device identifiers, or browsing history.</li>
+            <li>We do not run any third-party analytics, crash reporting, or advertising SDKs.</li>
+            <li>We do not maintain user accounts or servers of our own.</li>
+        </ul>
+
+        <h2>3. Google Drive sync</h2>
+        <p>Google Drive sync is <strong>optional</strong> and is off until you sign in. You choose how files are stored:</p>
+        <ul>
+            <li><strong>Hidden (default):</strong> entries are stored in Drive's <code>appDataFolder</code>, an app-only space invisible in the regular Drive UI. Only the Journal app, signed in to your account, can read or write there.</li>
+            <li><strong>Visible in Drive:</strong> entries are stored in a <code>JournalApp</code> folder in your normal Drive. Anyone with access to your Drive account can see, edit, or delete them, and the files may appear in Drive's Recent/Suggested surfaces.</li>
+        </ul>
+        <p>You can sign out at any time from Settings, which removes the locally stored OAuth tokens. Signing out does not delete files already in your Drive — you can delete those from Drive directly.</p>
+        <p>The App's use of Google user data complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically, Drive data accessed through Google APIs is used <strong>only</strong> to provide the journal sync feature you have enabled, is <strong>not</strong> transferred to others, is <strong>not</strong> used for advertising, and is <strong>not</strong> read by humans except where required for security, legal compliance, or with your explicit consent.</p>
+
+        <h2>4. Permissions</h2>
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Why it is requested</th>
+            </tr>
+            <tr>
+                <td>Internet / network state</td>
+                <td>To sync with Google Drive when you enable it.</td>
+            </tr>
+            <tr>
+                <td>Record audio (microphone)</td>
+                <td>To enable speech-to-text dictation of entries.</td>
+            </tr>
+            <tr>
+                <td>Post notifications</td>
+                <td>To show reminder notifications you configure.</td>
+            </tr>
+        </table>
+        <p>You can revoke any of these permissions at any time in Android Settings.</p>
+
+        <h2>5. Data retention and deletion</h2>
+        <ul>
+            <li><strong>On-device data</strong> remains until you delete an entry, clear the app's storage, or uninstall the App. Deleted entries enter a Recycle Bin and are permanently deleted after 30 days, or sooner if you delete them manually.</li>
+            <li><strong>Drive data</strong> is controlled by you in your Google Drive. You can delete it directly in Drive, or by deleting entries in the App while signed in.</li>
+            <li><strong>OAuth tokens</strong> are removed from the device when you sign out or uninstall the App.</li>
+        </ul>
+        <p>To revoke the App's access to your Google account at any time, visit <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</p>
+
+        <h2>6. Children's privacy</h2>
+        <p>The App is not directed to children under 13 (or the equivalent minimum age in your jurisdiction) and we do not knowingly collect personal information from them.</p>
+
+        <h2>7. Security</h2>
+        <p>Data on your device is protected by Android's app sandbox and the security of your device's lock screen. Data in transit to Google is protected by HTTPS. No method of electronic storage or transmission is 100% secure; please use a device passcode and protect your Google account with a strong password and 2-Step Verification.</p>
+
+        <h2>8. International users</h2>
+        <p>The App stores data on your device and, optionally, in your Google Drive account. Google may process Drive data in countries other than your own under its own privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+
+        <h2>9. Your rights</h2>
+        <p>Because we do not hold your data, you exercise your rights directly:</p>
+        <ul>
+            <li><strong>Access / portability:</strong> entries are stored as files on your device or in your Drive and can be copied freely.</li>
+            <li><strong>Deletion:</strong> delete entries within the App, or remove the relevant files from your Drive.</li>
+            <li><strong>Withdraw consent:</strong> sign out and/or revoke Drive access in your Google account.</li>
+        </ul>
+        <p>If you have questions about your rights under laws such as GDPR or CCPA, contact us at the address below.</p>
+
+        <h2>10. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. The "Last updated" date above will reflect the latest revision. Material changes will be highlighted in the App or on this page.</p>
+
+        <h2>11. Contact</h2>
+        <p><a href="mailto:admin@chrisclark.net">admin@chrisclark.net</a></p>
+
+        <a class="back" href="/">← Back</a>
+    </div>
+</body>
+</html>

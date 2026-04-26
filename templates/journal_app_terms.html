@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4F6FA" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
+    <title>Terms of Service · Journal App · Chris Clark</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme");
+                var dark = saved === "dark" || (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+                if (dark) document.documentElement.setAttribute("data-theme", "dark");
+            } catch (e) {}
+        })();
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            color-scheme: light dark;
+            --bg: #F4F6FA;
+            --surface: #FFFFFF;
+            --text: #0F172A;
+            --muted: #64748B;
+            --primary: #E8834F;
+            --border: rgba(15, 23, 42, 0.08);
+            --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+        }
+        :root[data-theme="dark"] {
+            --bg: #0B1220;
+            --surface: #121A2B;
+            --text: #E6ECF3;
+            --muted: #94A3B8;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 160px 20px 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .site-logo {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 100;
+            display: block;
+            width: 240px;
+            height: 128px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+        .site-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .container { max-width: 720px; width: 100%; }
+        h1 { font-size: 32px; margin-bottom: 6px; letter-spacing: -0.5px; }
+        .updated { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+        h2 { font-size: 18px; margin: 28px 0 10px; }
+        p, li { line-height: 1.6; font-size: 15px; margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        a { color: var(--primary); }
+        .back { display: inline-block; margin-top: 32px; color: var(--muted); text-decoration: none; }
+        .back:hover { color: var(--text); }
+        .all-caps { font-size: 13px; line-height: 1.55; }
+        @media (max-width: 520px) {
+            .site-logo { width: 160px; height: 88px; }
+            body { padding-top: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <a class="site-logo" href="/" aria-label="Chris Clark home">
+        <img src="/static/CC_Mountain.jpg" alt="" width="320" height="175">
+    </a>
+    <div class="container">
+        <h1>Terms of Service for Journal</h1>
+        <p class="updated">Last updated: April 26, 2026</p>
+
+        <p>By downloading, installing, or using the Journal app ("the App"), you agree to these Terms of Service ("Terms"). If you do not agree, do not use the App.</p>
+
+        <h2>1. The App</h2>
+        <p>Journal is a personal journaling app for Android. Entries are stored locally on your device. You can optionally sign in with Google to sync your entries to your own Google Drive account. The App contains no ads and no third-party analytics.</p>
+
+        <h2>2. Eligibility</h2>
+        <p>You must be at least 13 years old (or the minimum digital-consent age in your jurisdiction) to use the App. By using the App you represent that you meet this requirement.</p>
+
+        <h2>3. Your account and your data</h2>
+        <ul>
+            <li>The App does not have user accounts of its own. If you choose to sign in with Google, you do so under <a href="https://policies.google.com/terms">Google's Terms of Service</a>.</li>
+            <li><strong>You are solely responsible</strong> for the content you create in the App, for keeping a backup of anything you cannot afford to lose, and for the security of your device and Google account.</li>
+            <li>We do not host your entries on our servers and cannot recover them if your device is lost, your storage is wiped, or you delete content from your Google Drive.</li>
+        </ul>
+
+        <h2>4. License to use the App</h2>
+        <p>We grant you a limited, non-exclusive, non-transferable, revocable license to install and use the App on devices you own or control, for your personal, non-commercial use, subject to these Terms and the rules of the app store from which you obtained the App.</p>
+
+        <h2>5. Acceptable use</h2>
+        <p>You agree <strong>not</strong> to:</p>
+        <ul>
+            <li>reverse engineer, decompile, or attempt to extract the source code of the App, except to the extent permitted by law;</li>
+            <li>modify, adapt, or create derivative works of the App;</li>
+            <li>use the App to store or transmit content that is unlawful, infringes third-party rights, or violates Google's terms;</li>
+            <li>use the App in a way that interferes with its operation or with other users' use of Google services;</li>
+            <li>circumvent any security or access-control mechanism in the App or in Google's APIs.</li>
+        </ul>
+
+        <h2>6. Third-party services</h2>
+        <p>The App uses Google Sign-In and the Google Drive API. Your use of those services is governed by Google's terms and privacy policy. We are not responsible for changes to, downtime in, or actions taken by those services. The App's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <p>Speech-to-text uses Android's speech recognition service, which may process audio on-device or on Google's servers under Google's terms.</p>
+
+        <h2>7. Your content</h2>
+        <p>You retain all rights to the journal entries and other content you create in the App. We claim no ownership over your content. Because we do not host your content, we have no ability to access, moderate, or remove it.</p>
+
+        <h2>8. Privacy</h2>
+        <p>Your use of the App is also subject to our <a href="https://chrisclark.net/JournalingApp/privacy">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+
+        <h2>9. Updates and changes</h2>
+        <p>We may release updates to the App from time to time, including bug fixes, security patches, and new features. We may also add, remove, or change features without notice. We may update these Terms; the "Last updated" date above will reflect the latest revision. Continued use of the App after changes constitutes acceptance of the revised Terms.</p>
+
+        <h2>10. Disclaimers</h2>
+        <p class="all-caps">THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR THAT THE APP WILL BE ERROR-FREE, UNINTERRUPTED, OR FREE OF DATA LOSS. YOU USE THE APP AT YOUR OWN RISK.</p>
+        <p>We do not warrant that synchronization with Google Drive will be timely, complete, or free of errors, or that any data stored locally or in Google Drive will not be lost or corrupted.</p>
+
+        <h2>11. Limitation of liability</h2>
+        <p class="all-caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL CHRIS CLARK BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF DATA, PROFITS, REVENUE, OR GOODWILL, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF (OR INABILITY TO USE) THE APP, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <p>To the extent any liability cannot be excluded, our total aggregate liability for any claim arising out of or relating to these Terms or the App will not exceed the greater of (a) the amount you paid us for the App in the 12 months preceding the claim, or (b) USD $5.</p>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain damages; in those jurisdictions our liability is limited to the smallest extent permitted by law.</p>
+
+        <h2>12. Indemnification</h2>
+        <p>You agree to indemnify and hold harmless Chris Clark from any claims, losses, or expenses (including reasonable legal fees) arising out of your content, your use of the App, or your violation of these Terms or applicable law.</p>
+
+        <h2>13. Termination</h2>
+        <p>You may stop using the App at any time by uninstalling it. We may suspend or terminate your right to use the App if you materially violate these Terms. Sections that by their nature should survive termination (including ownership, disclaimers, limitation of liability, and dispute resolution) will survive.</p>
+
+        <h2>14. Governing law and disputes</h2>
+        <p>These Terms are governed by the laws of the Commonwealth of Virginia, United States of America, without regard to its conflict-of-laws rules. The exclusive venue for disputes is the courts located in Virginia, unless mandatory consumer-protection law provides otherwise.</p>
+
+        <h2>15. Contact</h2>
+        <p><a href="mailto:admin@chrisclark.net">admin@chrisclark.net</a></p>
+
+        <a class="back" href="/">← Back</a>
+    </div>
+</body>
+</html>
